@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://baqd1dl031hq8"]
+[gd_scene load_steps=26 format=4 uid="uid://baqd1dl031hq8"]
 
 [ext_resource type="Texture2D" uid="uid://bqy4acn0gb1p0" path="res://Graveyard/Tiles/Back_Tiles.png" id="1_3d1so"]
 [ext_resource type="Texture2D" uid="uid://dy4e3hs0yrcrs" path="res://Graveyard/Parallax Background/Background/Cloud 1.png" id="1_qfwjr"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://18iu6kpyyqj4" path="res://Graveyard/Props&Objects/Trees.png" id="7_6ls3e"]
 [ext_resource type="Texture2D" uid="uid://c2ajirydx5md4" path="res://Graveyard/Parallax Background/Mountain/Mountain 2.png" id="7_d384k"]
 [ext_resource type="PackedScene" uid="uid://daybeonkhwgtw" path="res://GhostPal.tscn" id="15_h0mve"]
+[ext_resource type="AudioStream" uid="uid://dgpe32t6u0h3i" path="res://Music/vampires-light-halloween-horror-music-loop-244575.mp3" id="16_71tf7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xq67h"]
 texture = ExtResource("1_3d1so")
@@ -430,3 +431,8 @@ tile_set = SubResource("TileSet_qoj75")
 
 [node name="Node2D" parent="." instance=ExtResource("15_h0mve")]
 scale = Vector2(3, 3)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_71tf7")
+autoplay = true
+parameters/looping = true
